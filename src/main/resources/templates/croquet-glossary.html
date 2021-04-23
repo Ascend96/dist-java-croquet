@@ -8,7 +8,13 @@
 <div id="content">
     <h2>Golf Croquet Terms</h2>
 
-    <!-- Create a table of GlossaryTerm objects here -->
+    <ul th:action="@{/terms}"
+        th:object="${terms}">
+        <li th:each="i : ${terms}"
+            th:text="${i}">
+        </li>
+
+    </ul>
 
 
 </div>
